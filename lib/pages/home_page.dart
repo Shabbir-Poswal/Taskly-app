@@ -74,7 +74,7 @@ class _HomePageState extends State<HomePage> {
               task.done
                   ? Icons.check_box_outlined
                   : Icons.check_box_outline_blank,
-              color: Colors.red,
+              color: Colors.blueAccent,
             ),
             onTap: () {
               task.done = !task.done;
@@ -106,7 +106,10 @@ class _HomePageState extends State<HomePage> {
       context: context,
       builder: (BuildContext _context) {
         return AlertDialog(
-          title: const Text("Add New Task", style: TextStyle(fontSize: 25)),
+          title: const Text(
+            "Add New Task!",
+            style: TextStyle(fontSize: 25),
+          ),
           content: TextField(
             onSubmitted: (_) {
               if (_newTaskContent != null) {
